@@ -1,8 +1,3 @@
-
-/* =========================================
-   01. VARIABLES Y CONFIGURACION GENERAL
-========================================= */
-
 :root {
     --azulfondo: #101827;
     --azulcontainer: #202D40;
@@ -23,7 +18,6 @@ html {
 *:after {
     box-sizing: inherit;
 }
-
 
 /* =========================================
    02. ESTILOS GENERALES
@@ -48,7 +42,6 @@ img {
     margin: 0 auto;
     padding: 0 2rem;
 }
-
 
 /* =========================================
    03. HEADER Y NAVEGACION
@@ -97,7 +90,6 @@ header {
     background-color: var(--amarillocontraste);
     color: var(--azulfondo);
 }
-
 
 /* =========================================
    04. HERO - INICIO
@@ -161,7 +153,6 @@ header {
     filter: brightness(0.55);
 }
 
-
 /* =========================================
    05. SECCION RESEÑA
 ========================================= */
@@ -190,7 +181,7 @@ header {
 .poster-peli img {
     width: 100%;
     border: 1px solid var(--bordesDetalles);
-    border-radius: 0.5rem;
+    border-radius: 0;
 }
 
 .informacion-pelicula {
@@ -220,7 +211,6 @@ header {
     text-align: justify;
 }
 
-
 /* =========================================
    06. DATOS IMPORTANTES Y TARJETAS
 ========================================= */
@@ -243,7 +233,7 @@ header {
     padding: 1.5rem;
     background-color: var(--azulfondo);
     border: 1px solid var(--bordesDetalles);
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     transition: 0.3s;
 }
 
@@ -264,7 +254,6 @@ header {
     border-color: var(--amarillocontraste);
     transform: translateY(-0.3rem);
 }
-
 
 /* =========================================
    07. TRAILER Y ENLACES
@@ -318,7 +307,6 @@ header {
     transform: translateY(-0.2rem);
 }
 
-
 /* =========================================
    08. FOOTER
 ========================================= */
@@ -334,7 +322,6 @@ header {
     color: var(--grisazulado);
     font-size: 1.3rem;
 }
-
 
 /* =========================================
    09. AJUSTES PARA PANTALLAS PEQUEÑAS
