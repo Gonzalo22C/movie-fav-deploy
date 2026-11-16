@@ -1,0 +1,387 @@
+
+/* =========================================
+   01. VARIABLES Y CONFIGURACION GENERAL
+========================================= */
+
+:root {
+    --azulfondo: #101827;
+    --azulcontainer: #202D40;
+    --amarillocontraste: #F4C928;
+    --blancotexto: #F1F0EC;
+    --grisazulado: #8793A3;
+    --bordesDetalles: #34445A;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-padding-top: 8rem;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+/* =========================================
+   02. ESTILOS GENERALES
+========================================= */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--azulfondo);
+    color: var(--blancotexto);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 110rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+
+/* =========================================
+   03. HEADER Y NAVEGACION
+========================================= */
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: var(--azulfondo);
+    border-bottom: 1px solid var(--bordesDetalles);
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.barra-navegacion-main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.barra-navegacion-main a {
+    display: inline-flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    color: var(--blancotexto);
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 0.5rem;
+    transition: 0.3s;
+}
+
+.barra-navegacion-main a:hover {
+    background-color: var(--amarillocontraste);
+    color: var(--azulfondo);
+}
+
+
+/* =========================================
+   04. HERO - INICIO
+========================================= */
+
+.seccion-hero {
+    position: relative;
+    min-height: calc(100vh - 6rem);
+}
+
+.hero-contenido {
+    position: relative;
+    max-width: none;
+    min-height: calc(100vh - 6rem);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+.hero-titulo {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-titulo h1 {
+    margin: 0;
+    color: var(--amarillocontraste);
+    font-size: 9rem;
+    font-weight: 800;
+    letter-spacing: 0.3rem;
+}
+
+.frase-hero {
+    position: relative;
+    z-index: 1;
+    margin-top: 1rem;
+    color: var(--blancotexto);
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-shadow: 1px 2px 4px #000;
+}
+
+.hero-imagen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.hero-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.55);
+}
+
+
+/* =========================================
+   05. SECCION RESEÑA
+========================================= */
+
+.seccion-resena {
+    padding: 0 2rem 5rem;
+}
+
+.resena-contenido {
+    max-width: 90rem;
+    padding: 4rem;
+    background-color: var(--azulcontainer);
+}
+
+.resena-grid {
+    display: grid;
+    grid-template-columns: 25rem 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.poster-peli {
+    width: 100%;
+}
+
+.poster-peli img {
+    width: 100%;
+    border: 1px solid var(--bordesDetalles);
+    border-radius: 0.5rem;
+}
+
+.informacion-pelicula {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.descripcion-resena h2 {
+    margin: 0 0 1.5rem;
+    color: var(--amarillocontraste);
+    font-size: 2.4rem;
+}
+
+.descripcion-resena h3,
+.datos-importantes h3 {
+    margin: 0 0 1rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.resena-txt {
+    margin: 0;
+    color: var(--blancotexto);
+    font-size: 1.5rem;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+
+/* =========================================
+   06. DATOS IMPORTANTES Y TARJETAS
+========================================= */
+
+.datos-importantes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.datos-importantes h3 {
+    grid-column: 1 / -1;
+    color: var(--amarillocontraste);
+}
+
+.data-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1.5rem;
+    background-color: var(--azulfondo);
+    border: 1px solid var(--bordesDetalles);
+    border-radius: 0.5rem;
+    transition: 0.3s;
+}
+
+.data-card h4 {
+    margin: 0;
+    color: var(--grisazulado);
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.data-card span {
+    color: var(--blancotexto);
+    font-size: 1.4rem;
+}
+
+.data-card:hover {
+    border-color: var(--amarillocontraste);
+    transform: translateY(-0.3rem);
+}
+
+
+/* =========================================
+   07. TRAILER Y ENLACES
+========================================= */
+
+.seccion-trailer {
+    padding: 2rem 2rem 5rem;
+}
+
+.trailer-contenido {
+    max-width: 90rem;
+    text-align: center;
+}
+
+.trailer-contenido h2 {
+    margin-bottom: 2.5rem;
+    color: var(--amarillocontraste);
+    font-size: 2.4rem;
+}
+
+.enlaces-botones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.enlaces-botones iframe {
+    width: 100%;
+    max-width: 75rem;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    border: 1px solid var(--bordesDetalles);
+    border-radius: 0.5rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1.5rem 3rem;
+    background-color: var(--amarillocontraste);
+    color: var(--azulfondo);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--blancotexto);
+    transform: translateY(-0.2rem);
+}
+
+
+/* =========================================
+   08. FOOTER
+========================================= */
+
+.seccion-footer {
+    padding: 2rem;
+    border-top: 1px solid var(--bordesDetalles);
+    text-align: center;
+}
+
+.footer-line {
+    margin: 0;
+    color: var(--grisazulado);
+    font-size: 1.3rem;
+}
+
+
+/* =========================================
+   09. AJUSTES PARA PANTALLAS PEQUEÑAS
+========================================= */
+
+@media (max-width: 768px) {
+
+    .hero-titulo h1 {
+        font-size: 5rem;
+    }
+
+    .frase-hero {
+        font-size: 1.5rem;
+    }
+
+    .resena-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .poster-peli {
+        max-width: 25rem;
+        margin: 0 auto;
+    }
+
+    .resena-contenido {
+        padding: 2rem;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .barra-navegacion-main {
+        gap: 0.5rem;
+    }
+
+    .barra-navegacion-main a {
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .hero-titulo h1 {
+        font-size: 3.8rem;
+    }
+
+    .datos-importantes {
+        grid-template-columns: 1fr;
+    }
+
+}
